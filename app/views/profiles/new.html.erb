@@ -1,27 +1,5 @@
 <h1>New</h1>
- <%= form_with(model: @profile, local: true) do |form| %>
 
-  <div>
-    <%= form.label :avatar%>
-    <%= form.text_field :avatar, id: :avatar%>
-  </div>
+<%= link_to 'back', profiles_path %>
 
-  <div>
-    <%= form.label :first_name%>
-    <%= form.text_field :first_name, id: :first_name%>
-  </div>
-
-  <div>
-    <%= form.label :last_name%>
-    <%= form.text_field :last_name, id: :last_name%>
-  </div>
-
-  <div>
-    <%= form.label :country%>
-    <%= form.text_field :country, id: :country%>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<%end%>
+<%= render 'form', profile: @profile %>
