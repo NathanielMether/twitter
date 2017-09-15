@@ -1,0 +1,10 @@
+<h1>Index</h1>
+<%= link_to 'create', new_profile_path %>
+
+<ul>
+  <% @profiles.each do |profile| %>
+    <li><%= profile.first_name %> | 
+    <%= link_to 'show', profile_path(profile) %> | 
+    <%= link_to 'edit', edit_profile_path(profile) %></li>
+  <% end %>
+</ul>

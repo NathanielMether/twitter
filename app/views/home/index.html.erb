@@ -2,7 +2,7 @@
 
 <ul>
   <% @tweets.each do |tweet| %>
-    <li><%= tweet.message %></li>
+    <li><%= tweet.message %> | <%= tweet.user.email unless tweet.user.nil? %> </li>
   <% end %>
 </ul>
 

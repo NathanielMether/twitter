@@ -1,0 +1,8 @@
+<h1>Show Profile</h1>
+
+<%= image_tag @profile.avatar, width: 200 %>
+<%= @profile.first_name%>  <%= @profile.last_name%> | 
+<%= link_to 'edit', edit_profile_path(@profile) %> | 
+<%= link_to 'back', profiles_path %> | 
+<%= link_to 'delete', profile_path(@profile), method: :delete, data: { confirm: 'Are you sure'
+} %> 
